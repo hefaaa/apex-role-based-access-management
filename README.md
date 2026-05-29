@@ -43,7 +43,7 @@ The application provides authentication, role-based authorization, user administ
 - Mongoose
 
 ## Live Demo link
-https://fluffy-elf-587313.netlify.app/
+https://boisterous-llama-6af8b1.netlify.app/
 
 ## Demo Credentials
 
