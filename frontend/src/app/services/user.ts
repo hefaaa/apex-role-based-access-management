@@ -11,7 +11,7 @@ from '@angular/common/http';
 export class UserService {
 
   api =
-    'http://localhost:3000/api/users';
+    'https://apex-role-based-access-management.onrender.com/api/users';
 
   constructor(
     private http: HttpClient
