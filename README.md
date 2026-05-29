@@ -61,3 +61,13 @@ http://localhost:4200
 
 Backend:
 http://localhost:3000
+
+## Demo Credentials
+
+Admin Account
+Username: admin
+Password: admin123
+
+General User Account
+Username: user
+Password: user123
