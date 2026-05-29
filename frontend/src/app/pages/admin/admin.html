@@ -1,0 +1,114 @@
+<div class="admin-container">
+
+  <div class="admin-card">
+
+    <h1>Admin Panel</h1>
+
+    <p>User Management </p>
+
+    <div class="add-user-box">
+
+      <h2>Add User</h2>
+
+      <input
+        [(ngModel)]="name"
+        placeholder="Full Name"
+      >
+
+      <input
+        [(ngModel)]="email"
+        placeholder="Email"
+      >
+
+      <input
+        [(ngModel)]="username"
+        placeholder="Username"
+      >
+
+      <input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="Password"
+      >
+
+      <input
+        [(ngModel)]="department"
+        placeholder="Department"
+      >
+
+      <select [(ngModel)]="role">
+
+        <option>General User</option>
+
+        <option>Admin</option>
+
+      </select>
+
+      <button
+      *ngIf="!editingUserId"
+      (click)="addUser()"
+    >
+      Add User
+    </button>
+
+    <button
+      *ngIf="editingUserId"
+      (click)="updateUser()"
+    >
+      Update User
+    </button>
+    </div>
+
+    <h2>System Users</h2>
+
+    <div class="users-grid">
+
+      <div
+        class="user-box"
+        *ngFor="let user of users"
+      >
+
+        <div
+          class="status-badge"
+          [class.active]="user.active"
+          [class.inactive]="!user.active"
+        >
+
+          {{ user.active ? 'Active' : 'Inactive' }}
+
+        </div>
+
+        <h3>{{ user.name }}</h3>
+
+        <p><b>Email:</b> {{ user.email }}</p>
+
+        <p><b>Department:</b> {{ user.department }}</p>
+
+        <p><b>Role:</b> {{ user.role }}</p>
+
+        <p><b>Access:</b> {{ user.accessLevel }}</p>
+
+        <p><b>Last Login:</b> {{ user.lastLogin }}</p>
+
+        <button
+          (click)="editUser(user)"
+        >
+          Edit
+        </button>
+
+        
+
+        <button
+          class="delete-btn"
+          (click)="deleteUser(user._id)"
+        >
+          Delete
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

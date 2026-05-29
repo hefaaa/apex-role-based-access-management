@@ -1,0 +1,47 @@
+<div class="login-container">
+
+  <div class="login-card">
+
+    <div class="brand">
+
+      <img
+        src="/apex.jpg"
+        alt="Apex Logo"
+        class="logo"
+      >
+
+      <h1>APEX</h1>
+
+    </div>
+
+    <p class="subtitle">
+      Role-Based Access Management System
+    </p>
+
+    <input
+      type="text"
+      [(ngModel)]="username"
+      placeholder="Username"
+    >
+
+    <input
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Password"
+    >
+
+    <select [(ngModel)]="role">
+
+      <option>General User</option>
+
+      <option>Admin</option>
+
+    </select>
+
+    <button (click)="login()">
+      Login
+    </button>
+
+  </div>
+
+</div>
